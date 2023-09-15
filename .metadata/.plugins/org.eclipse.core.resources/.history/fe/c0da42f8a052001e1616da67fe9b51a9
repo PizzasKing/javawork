@@ -1,0 +1,19 @@
+package arrays;
+
+public class Array구구단 {
+
+	public static void main(String[] args) {
+		//3단 출력
+		int dan =3;
+		
+		int[] gugudan =new int[9];
+		for(int i =0;i<gugudan.length;i++) {
+			gugudan[i]=(i+1)*dan;
+			System.out.println(dan+" * "+i+"="+gugudan[i]);
+		}
+		
+		
+
+	}
+
+}

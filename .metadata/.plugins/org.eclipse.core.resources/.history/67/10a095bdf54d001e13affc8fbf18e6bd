@@ -1,0 +1,17 @@
+package methods;
+
+public class OneUpTest2 {
+	
+	int x =1; //전역 변수
+	
+	public static int oneUp() {
+		x += 1;
+		return x;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

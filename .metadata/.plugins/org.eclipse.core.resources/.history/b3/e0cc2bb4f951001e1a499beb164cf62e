@@ -1,0 +1,15 @@
+package customers;
+
+public class CustomerTest2 {
+
+	public static void main(String[] args) {
+		Customer lee = new Customer(1001, "이순신");
+		
+		int price = 10000;
+		lee.calcPrice(price);
+		
+		System.out.println(lee.showCustomerInfo());
+
+	}
+
+}
