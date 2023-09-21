@@ -10,6 +10,8 @@ public class RemoteControlTest {
 		rcTV.setVoulume(11);
 		rcTV.setMute(true);
 		rcTV.turnOff();
+		
+		//건전지 교환
 		RemoteControl.changeBattery();
 
 	}

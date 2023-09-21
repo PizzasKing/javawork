@@ -11,26 +11,31 @@ public class BankMain2 {
 		boolean sw = true;
 
 		while (sw) {
-			System.out.println("============================================");
-			System.out.println("1.계좌생성 | 2.계좌목록 | 3.입금 | 4.출금 | 5.종료");
-			System.out.println("============================================");
-			System.out.print("선택> ");
+			try {
+				System.out.println("============================================");
+				System.out.println("1.계좌생성 | 2.계좌목록 | 3.입금 | 4.출금 | 5.종료");
+				System.out.println("============================================");
+				System.out.print("선택> ");
 
-			// 메뉴 선택
-			int selectNo = Integer.parseInt(scanner.nextLine());
+				// 메뉴 선택
+				int selectNo = Integer.parseInt(scanner.nextLine());
 
-			if (selectNo == 1) {
-				createAccount();
-			} else if (selectNo == 2) {
-				getAccountList();
-			} else if (selectNo == 3) {
-				deposit();
-			} else if (selectNo == 4) {
-				withdraw();
-			} else if (selectNo == 5) {
-				sw = false;
-			} else {
-				System.out.println("지원하지 않는 기능입니다. 다시 입력해주세요.");
+				if (selectNo == 1) {
+					createAccount();
+				} else if (selectNo == 2) {
+					getAccountList();
+				} else if (selectNo == 3) {
+					deposit();
+				} else if (selectNo == 4) {
+					withdraw();
+				} else if (selectNo == 5) {
+					sw = false;
+				} else {
+					System.out.println("지원하지 않는 기능입니다. 다시 입력해주세요.");
+				}
+			} catch (NumberFormatException e) {
+				System.out.println("숫자로 메뉴를 선택해주세요");
+
 			}
 
 		}
@@ -132,7 +137,8 @@ public class BankMain2 {
 						System.out.println("결과: 출금 완료되었습니다.");
 						break;
 					}
-				}break;
+				}
+				break;
 
 			} else {
 				System.out.println("계좌가 없습니다. 다시 입력해주세요.");

@@ -26,4 +26,24 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="interfaceex.remote.Television"/>
+    <fullyQualifiedTypeName name="interfaceex.scheduler.RoundRobin"/>
+    <fullyQualifiedTypeName name="interfaceex.scheduler.LeastJob"/>
+    <fullyQualifiedTypeName name="interfaceex.scheduler.PriorityAllocation"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="abstracts.player.AdvancedLevel"/>
+    <fullyQualifiedTypeName name="interfaceex.remote.RemoteControl"/>
+    <fullyQualifiedTypeName name="interfaceex.inheritance.MyInterface"/>
+    <fullyQualifiedTypeName name="interfaceex.inheritance.Y"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Constructor"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Method"/>
+    <fullyQualifiedTypeName name="java.lang.NumberFormatException"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="nestedclass.A.B"/>
+    <fullyQualifiedTypeName name="nestedclass.A.C"/>
+    <fullyQualifiedTypeName name="MyRunnable"/>
+    <fullyQualifiedTypeName name="nestedclass.interfaces.CallListener"/>
+    <fullyQualifiedTypeName name="nestedclass.interfaces.MessageListener"/>
+    <fullyQualifiedTypeName name="nestedclass.interfaces.Button.OnClickListener"/>
 </qualifiedTypeNameHistroy>
