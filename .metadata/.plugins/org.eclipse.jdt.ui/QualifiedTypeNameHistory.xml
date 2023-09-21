@@ -25,7 +25,6 @@
     <fullyQualifiedTypeName name="calctime.SystemTime"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="interfaceex.remote.Television"/>
     <fullyQualifiedTypeName name="interfaceex.scheduler.RoundRobin"/>
     <fullyQualifiedTypeName name="interfaceex.scheduler.LeastJob"/>
@@ -46,4 +45,16 @@
     <fullyQualifiedTypeName name="nestedclass.interfaces.CallListener"/>
     <fullyQualifiedTypeName name="nestedclass.interfaces.MessageListener"/>
     <fullyQualifiedTypeName name="nestedclass.interfaces.Button.OnClickListener"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="exceptions.resource.MyResource"/>
+    <fullyQualifiedTypeName name="nestedclass.student.Student.Score"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="collection.member.MemberArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
 </qualifiedTypeNameHistroy>

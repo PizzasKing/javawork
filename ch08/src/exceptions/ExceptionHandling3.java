@@ -4,7 +4,9 @@ public class ExceptionHandling3 {
 
 	public static void main(String[] args) {
 		// 일반예외- 컴파일 오류(컴파일러 체크)
+		
 		try {
+			Class.forName("java.lang.Strings");
 			//클래스 이름을 잘못 입력하면 에러발생
 			Class.forName("java.lang.Math");
 			System.out.println("찾는 클래스가 있습니다.");
