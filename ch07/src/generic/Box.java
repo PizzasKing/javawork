@@ -1,10 +1,11 @@
 package generic;
 
+//제네릭 타입으로 클래스 정의
 public class Box<T> {
-	// 필드
+    //필드
 	private T type;
 	
-	// 매서드
+	//메서드
 	public void set(T type) {
 		this.type = type;
 	}
@@ -12,5 +13,4 @@ public class Box<T> {
 	public T get() {
 		return type;
 	}
-
 }

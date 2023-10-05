@@ -2,12 +2,11 @@ package inheritance.statement;
 
 public class Alcohol extends Drink{
 	
-	float alcper;  //알콜 도수
+	float alcper;   //알콜 도수
 
 	public Alcohol(String name, int price, int count, float alcper) {
-		
 		super(name, price, count);
-		this.alcper=alcper;
+		this.alcper = alcper;
 	}
 	
 	public static void printTitle() {
@@ -16,8 +15,8 @@ public class Alcohol extends Drink{
 	
 	@Override
 	public void printData() {
-		System.out.println(name+" ("+alcper+")"+ "\t"+ price + "\t" + count
-				+ "\t" + getTotalPrice());
+		System.out.println(name + " (" + alcper + ")\t" + price + "\t" 
+				+ count + "\t" + getTotalPrice());
 	}
 
 }

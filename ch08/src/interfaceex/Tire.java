@@ -1,7 +1,6 @@
 package interfaceex;
 
 public interface Tire {
-	
-	public void roll();
-
+	//추상 메서드
+	public void roll(); 
 }

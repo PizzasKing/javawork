@@ -1,6 +1,6 @@
 package thissamples;
 
-public class Birthday {
+public class BirthDay {
 	int day;
 	int month;
 	int year;
@@ -8,9 +8,9 @@ public class Birthday {
 	public void setYear(int year) {
 		this.year = year;
 	}
-	// this를 리턴하는 매서드 정의
+	
+	//this를 리턴하는 메서드 정의
 	public void printThis() {
-		System.out.println(this);;
+		System.out.println(this);
 	}
-
 }

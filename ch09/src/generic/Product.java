@@ -16,7 +16,4 @@ public class Product<T, M> {
 	public void setModel(M model) {
 		this.model = model;
 	}
-	
-	
-
 }

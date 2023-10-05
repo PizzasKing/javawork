@@ -1,11 +1,11 @@
 package nestedclass.interfaces;
 
 public class Button {
-	// 필드 - 인터페이스형 멤버 변수
+	//필드 - 인터페이스형 멤버 변수
 	private OnClickListener listener;
-
+	
 	//내부 인터페이스
-	interface OnClickListener {
+	interface OnClickListener{
 		public void onClick();
 	}
 	

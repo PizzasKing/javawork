@@ -1,17 +1,19 @@
 package inheritance.statement;
 
 public class Drink {
-	//protected 접근 제어자는 상속할때만 사용함
-	protected String name;
-	protected int price;
-	protected int count;
+	//protected 접근제어자는 상속할때만 사용함
+	protected String name; //상품명
+	protected int price;   //가격
+	protected int count;   //수량
 	
 	public Drink(String name, int price, int count) {
-		this.name =name;
-		this.price=price;
-		this.count=count;
+		this.name = name;
+		this.price = price;
+		this.count = count;
 	}
+	
 	public int getTotalPrice() {
+		//금액 = 가격 x 수량
 		return price * count;
 	}
 	
@@ -20,8 +22,7 @@ public class Drink {
 	}
 	
 	public void printData() {
-		System.out.println(name+ "\t"+ price + "\t" + count
+		System.out.println(name + "\t" + price + "\t" + count
 				+ "\t" + getTotalPrice());
 	}
-
 }

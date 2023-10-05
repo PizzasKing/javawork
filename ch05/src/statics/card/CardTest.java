@@ -8,9 +8,9 @@ public class CardTest {
 		Card card2 = new Card();
 		Card card3 = new Card();
 		
-		System.out.println("카드번호: "+ card1.getCardNumber());
-		System.out.println("카드번호: "+ card2.getCardNumber());
-		System.out.println("카드번호: "+ card3.getCardNumber());
+		System.out.println("카드번호: " + card1.getCardNumber());
+		System.out.println("카드번호: " + card2.getCardNumber());
+		System.out.println("카드번호: " + card3.getCardNumber());
 
 	}
 

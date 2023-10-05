@@ -3,27 +3,28 @@ package abstracts.animal;
 public class AnimalTest {
 
 	public static void main(String[] args) {
-//		Cat cat = new Cat();
-//		cat.breathe();
-//		cat.sound();
+		//Cat 인스턴스 생성
+		/*Cat cat = new Cat();
+		cat.breathe();
+		cat.sound();*/
 		
-		
+		//다형성으로 객체 생성
 		Animal cat = new Cat();
 		cat.breathe();
 		cat.sound();
-		
 		
 		Animal dog = new Dog();
 		dog.breathe();
 		dog.sound();
 		
-		System.out.println("=====================");
-		
-		animalSound(new Dog());
+		System.out.println("=======================");
+		//메서드의 매개변수의 다형성
+		animalSound(new Dog());  //메서드 호출
 		animalSound(new Cat());
-		// 매서드의 매개변수의 다형성
 	}
+	
 	public static void animalSound(Animal animal) {
 		animal.sound();
 	}
+
 }

@@ -3,19 +3,18 @@ package inheritance.airplane;
 public class Main {
 
 	public static void main(String[] args) {
-		SuperSonicAirplane sa = new SuperSonicAirplane();
+		SuperSonicAirPlane sa = new SuperSonicAirPlane();
+		
 		sa.이륙하다();
 		sa.비행하다();
 		
-		// 모드 변경- 클래스 이름으로 직접 접근
-		sa.flyMode = SuperSonicAirplane.SUPERSONIC;
+		 //모드 변경 - 클래스 이름으로 직접 접근
+		sa.flyMode = SuperSonicAirPlane.SUPERSONIC;
 		sa.비행하다();
 		
-		sa.flyMode = SuperSonicAirplane.NORMAL;
+		sa.flyMode = SuperSonicAirPlane.NORMAL;
 		sa.비행하다();
 		
 		sa.착륙하다();
-
 	}
-
 }

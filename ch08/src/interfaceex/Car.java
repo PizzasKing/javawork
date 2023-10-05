@@ -1,17 +1,25 @@
 package interfaceex;
 
 public class Car {
-	//필드 -인터페이스형으로 타입 선언
-	Tire frontLeftTire = new HanTire();
-	Tire frontRightTire = new HanTire();
-	Tire backLeftTire = new KumTire();
-	Tire backRightTire = new KumTire();
+	//필드 - 인터페이스형 타입 변수 선언
+	Tire frontLeftTire;  //Tire frontLeftTire=null
+	Tire frontRightTire;
+	Tire backLeftTire;
+	Tire backRightTire;
 	
-	//매서드
+	public Car() {
+		frontLeftTire = new HanTire();
+		frontRightTire = new HanTire();
+		backLeftTire = new KumTire();
+		backRightTire = new KumTire();
+	}
+	
+	//메서드
 	void run() {
 		frontLeftTire.roll();
 		frontRightTire.roll();
 		backLeftTire.roll();
 		backRightTire.roll();
 	}
+	
 }

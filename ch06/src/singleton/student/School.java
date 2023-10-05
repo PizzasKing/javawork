@@ -6,16 +6,13 @@ public class School {
 	private School() {}
 	
 	public static School getInstance() {
-		if(instance ==null) {
+		if(instance == null)
 			instance = new School();
-			
-		}
 		return instance;
 	}
 	
-	public Student createNum() {
+	public Student createStudent() {
 		Student student = new Student();
 		return student;
 	}
-
 }

@@ -13,13 +13,13 @@ public class MyClassTest {
 		Y y = myClass;
 		y.y();
 		
-		System.out.println("===================");
-		//X와 Y를 상속한 MYInterface의 인스턴스 (iClass)
+		System.out.println("============");
+		
+		//X와 Y를 상속한 MyInterface의 인스턴스 (iClass) 생성
 		MyInterface iClass = myClass;
 		iClass.x();
 		iClass.y();
 		iClass.method();
-
 	}
 
 }

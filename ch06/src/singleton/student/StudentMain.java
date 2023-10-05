@@ -3,17 +3,27 @@ package singleton.student;
 public class StudentMain {
 
 	public static void main(String[] args) {
+		
 		School school = School.getInstance();
+		School school2 = School.getInstance();
 		
-		Student newStudent1 = school.createNum();
-		Student newStudent2 = school.createNum();
-		Student newStudent3 = school.createNum();
+		Student kim = school.createStudent();
+		Student choi = school.createStudent();
+		Student lee = school.createStudent();
 		
+		System.out.println("학번: " + kim.getStudentNum());
+		System.out.println("학번: " + choi.getStudentNum());
+		System.out.println("학번: " + lee.getStudentNum());
 		
-		System.out.println(newStudent1.getStudentNum());
-		System.out.println(newStudent2.getStudentNum());
-		System.out.println(newStudent3.getStudentNum());
-
+		//학교 객체의 주소
+		System.out.println(school);
+		System.out.println(school2);
+		
+		//학생 객체의 주소
+		System.out.println(kim);
+		System.out.println(choi);
+		System.out.println(lee);
+		
 	}
 
 }

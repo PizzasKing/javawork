@@ -1,7 +1,7 @@
 package singleton.student;
 
 public class Student {
-	private static int serialNum=20230000;
+	private static int serialNum = 100;
 	private int studentNum;
 	
 	public Student() {
@@ -12,5 +12,4 @@ public class Student {
 	public int getStudentNum() {
 		return studentNum;
 	}
-
 }

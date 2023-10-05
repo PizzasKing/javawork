@@ -6,4 +6,3 @@ public interface MyNumber1 {
 	
 	void calculate(int x);
 }
-

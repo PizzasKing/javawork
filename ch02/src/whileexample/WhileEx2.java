@@ -1,24 +1,21 @@
 package whileexample;
 
-import java.util.Scanner;
-
 public class WhileEx2 {
 
 	public static void main(String[] args) {
-		// 반복문 활용
+		// 1부터 10까지의 합계
+		// 변수 - n, sum
+		int n = 0;
+		/*n += 1; //0+1=1
+		n += 2; //1+2=3
+		n += 3; //3+3=6 */
+		int sum = 0;
 		
-		int i = 0;
-		Scanner sc = new Scanner(System.in);
-		System.out.print("입력: ");
-		int n = sc.nextInt();
-		while(i<n) {
-			i=i+1;
-			System.out.println(i);
+		while(n < 10) {
+			n++;  // n = n + 1
+			sum += n;  //sum = sum + n
+			System.out.println("n=" + n + ", sum=" + sum);
 		}
-				
-		sc.close();
-		
-
+		System.out.println("합계: " + sum);
 	}
-
 }

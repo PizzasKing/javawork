@@ -2,17 +2,16 @@ package classes.methods;
 
 public class Hello {
 	
-	// 기본 생성자
-	public Hello() {}
+	//기본 생성자
+	//public Hello() {} 
 	
-	
-	//sayHello() 매서드 정의
-	//매서드 오버로딩(함수 이름은 같고 매개변수가 다름)
+	//sayHello() 메서드 정의
+	//메서드 오버로딩(함수 이름은 같고 매개변수가 다름)
 	public void sayHello() {
-		System.out.println("안녕");
+		System.out.println("안녕~");
 	}
+	
 	public void sayHello(String name) {
-		System.out.println("안녕 "+ name);
+		System.out.println("안녕~ " + name);
 	}
-
 }
