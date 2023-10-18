@@ -1,6 +1,13 @@
 package banking.array;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account  implements Serializable{
+	;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 11111L;
 	//필드
 	private String ano;    //계좌 번호
 	private String owner;  //계좌주
