@@ -7,20 +7,19 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class BoardExample2 {
+public class BoardMain {
 
 	private Scanner scanner = new Scanner(System.in);
 	private Connection conn;
 	private PreparedStatement pstmt;
 
 	// db 연결관련 변수
-	private String driverClass = "oracle.jdbc.OracleDriver";
-	private String url = "jdbc:oracle:thin:@localhost:1521/xe";
-	private String user = "c##mydb";
-	private String password = "pwmydb";
-
+	private String driverClass = "com.mysql.cj.jdbc.Driver";
+	private String url = "jdbc:mysql://127.0.0.1:3306/mydb?serverTime=Asia/Seoul";
+	private String user = "myuser";
+	private String password = "pwmyuser";
 	// 생성자
-	public BoardExample2() {
+	public BoardMain() {
 		try {
 			Class.forName(driverClass);
 			conn = DriverManager.getConnection(url, user, password);
@@ -40,7 +39,7 @@ public class BoardExample2 {
 
 		// db - board 테이블의 모든 게시글 가져오기
 		try {
-			String sql = "SELECT bno, btitle, bcontent, bwriter, bdate " + "FROM board ORDER BY bno DESC";
+			String sql = "SELECT FROM board ORDER BY bno DESC";
 			pstmt = conn.prepareStatement(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) { // 게시글이 있는 동안 반복(다음 행으로 이동)
@@ -48,11 +47,14 @@ public class BoardExample2 {
 				// db의 값을 가져와서 board에 세팅
 				board.setBno(rs.getInt("bno"));
 				board.setBwriter(rs.getString("bwriter"));
-				board.setBdate(rs.getDate("bdate"));
+				board.setBdate(rs.getTimestamp("bdate"));
 				board.setBtitle(rs.getString("btitle"));
 
 				// 게시글 출력
-				System.out.printf("%-4s%-12s%-12s%-40s \n", board.getBno(), board.getBwriter(), board.getBdate(),
+				System.out.printf("%-4s%-12s%-30s%-30s \n",
+						board.getBno(),
+						board.getBwriter(),
+						board.getBdate(),
 						board.getBtitle());
 			} // while 끝
 			rs.close();
@@ -107,7 +109,8 @@ public class BoardExample2 {
 
 		// db 작업
 		try {
-			String sql = "INSERT INTO board(bno, btitle, bcontent, bwriter)\n" + "VALUES (seq.NEXTVAL, ?, ?, ?)";
+			String sql = "INSERT INTO board(btitle, bcontent, bwriter) " 
+					+ "VALUES (?, ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, board.getBtitle()); // 콘솔에서 입력한 제목을 db에 저장
 			pstmt.setString(2, board.getBcontent());
@@ -142,7 +145,7 @@ public class BoardExample2 {
 				// db의 값을 가져와서 board에 셋팅
 				board.setBno(rs.getInt("bno"));
 				board.setBwriter(rs.getString("bwriter"));
-				board.setBdate(rs.getDate("bdate"));
+				board.setBdate(rs.getTimestamp("bdate"));
 				board.setBtitle(rs.getString("btitle"));
 				board.setBcontent(rs.getString("bcontent"));
 
@@ -255,14 +258,6 @@ public class BoardExample2 {
 				// sql 실행
 				pstmt.executeUpdate();
 
-				sql = "drop sequence seq";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.executeUpdate();
-				
-				sql = "create sequence seq nocache";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.executeUpdate();
-				pstmt.close();
 			} catch (SQLException e) {
 				e.printStackTrace();
 				exit();
@@ -285,7 +280,7 @@ public class BoardExample2 {
 	}
 
 	public static void main(String[] args) {
-		BoardExample2 board1 = new BoardExample2();
+		BoardMain board1 = new BoardMain();
 		board1.list();
 	}
 
